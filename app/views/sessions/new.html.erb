@@ -1,0 +1,29 @@
+<div class="row d-flex justify-content-center align-items-center">
+    <div class="col-sm-6">
+        <div class="card text-center mt-5">
+            <div class="card-body">
+                <h5 class="card-title"> Login </h5>
+                <p class="card-text">
+                    <%= form_tag '/login' do %>
+                        <div class="form-group row">
+                            <%= label_tag 'Username','Username', class: "col-sm-2 col-form-label" %>
+                            <div class="col-sm-10">
+                                <%= text_field_tag :name, params[:name], :class =>"form-control" %>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <%= label_tag 'Password','Password', class: "col-sm-2 col-form-label" %>
+                            <div class="col-sm-10">
+                                <%= password_field_tag :password, params[:password], :class =>"form-control" %>
+                            </div>
+                        </div>
+
+                        <%= submit_tag "Log In", :class=> "btn btn-primary" %>
+                        <%= link_to 'Forgot password?', new_password_reset_path, :class=> "btn btn-primary" %>
+                        <%= link_to 'Back', :back, :class=> "btn btn-primary" %>
+                    <% end %>
+                </p>
+            </div> 
+        </div>   
+    </div>
+</div>    

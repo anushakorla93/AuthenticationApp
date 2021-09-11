@@ -1,0 +1,18 @@
+<% if current_user %>
+    <nav class="navbar navbar-dark bg-dark">
+        <%= link_to 'Logout', '/logout', :data => { :confirm => 'Are you sure?' }, :class=> "btn btn-primary" %>
+    </nav>
+<% end %>
+<div class="row d-flex justify-content-center align-items-center">
+    <div class="col-sm-6">
+        <div class="card text-center mt-5">
+        <div class="card-body">
+        <h5 class="card-title"> Hello and Welcome! </h5>
+            <p class="card-text"> 
+                <%= link_to 'Signup', '/signup', :class=> "btn btn-primary" %>
+                <%= link_to 'Login', '/login', :class=> "btn btn-primary" %>
+            </p>
+        </div>
+        </div>
+    </div>
+</div>
